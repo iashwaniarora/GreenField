@@ -1,0 +1,1151 @@
+/* disable shadows for better android performance */
+.ui-body-a,.ui-bar-a,.ui-btn-up-a,.ui-btn-hover-a,.ui-btn-down-a,.ui-body-b,.ui-bar-b,.ui-btn-up-b,.ui-btn-hover-b,.ui-btn-down-b,.ui-body-c,.ui-bar-c,.ui-btn-up-c,.ui-btn-hover-c,.ui-btn-down-c,.ui-body-d,.ui-bar-d,.ui-btn-up-d,.ui-btn-hover-d,.ui-btn-down-d,.ui-body-e,.ui-bar-e,.ui-btn-up-e,.ui-btn-hover-e,.ui-btn-down-e,.ui-shadow-inset,.ui-icon-shadow,.ui-focus,.ui-overlay-shadow,.ui-shadow,.ui-btn-active
+	{
+	text-shadow: none !important;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}
+
+.ui-btn-up-a {
+	color: #333333;
+}
+
+.ui-btn-inner {
+	border-top: 0px;
+}
+
+ .ui-btn-up-c,.ui-btn-down-c,.ui-btn-hover-c {
+	background: white;
+	background-image: (webkit-linear-gradient:none );
+} 
+/*Header for all screens*/
+body {
+	-webkit-user-select: none;
+}
+
+/*Selection of list item
+<<<<<<< .mine
+#msHomeMiddleList li:hover, #msHomeMiddleList a:focus, #msHomeLowerList li:hover, #msHomeLowerList a:focus, #OpenTicketDiv li:hover, #OpenTicketDiv a:focus, #ClosedTicketDiv li:hover, #ClosedTicketDiv a:focus{
+    background: #ffeebd; 
+=======
+/* #msHomeMiddleList li:hover, #msHomeMiddleList a:focus, #msHomeLowerList li:hover, #msHomeLowerList a:focus, #OpenTicketDiv li:hover, #OpenTicketDiv a:focus, #ClosedTicketDiv li:hover, #ClosedTicketDiv a:focus{
+    background: #ffeebd; Show a solid color for older browsers
+>>>>>>> .r8876
+    background: -moz-linear-gradient(#ffeebd, #ffeebd);
+    background: -o-linear-gradient(#ffeebd, #ffeebd);
+<<<<<<< .mine
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffeebd), to(#ffeebd)); 
+=======
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffeebd), to(#ffeebd)); Older webkit syntax
+>>>>>>> .r8876
+    background: -webkit-linear-gradient(#ffeebd, #ffeebd);
+    border-color: #bbbbbb;
+    border: 1px;
+}
+
+.whatNew_button:hover, .Support_button:hover{
+<<<<<<< .mine
+	background: #ffeebd; 
+=======
+	background: #ffeebd; Show a solid color for older browsers
+>>>>>>> .r8876
+    background: -moz-linear-gradient(#ffeebd, #ffeebd);
+    background: -o-linear-gradient(#ffeebd, #ffeebd);
+<<<<<<< .mine
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffeebd), to(#ffeebd)); 
+=======
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffeebd), to(#ffeebd)); Older webkit syntax
+>>>>>>> .r8876
+    background: -webkit-linear-gradient(#ffeebd, #ffeebd);
+    border-color: #bbbbbb;
+    border: 1px;
+}
+<<<<<<< .mine
+*/
+=======
+ */
+>>>>>>> .r8876
+
+/*End of Selection of list item*/
+
+/*Create Ticket css*/
+.msCreateTicketForm .content-primary {
+	padding: 10px;
+}
+
+.createTicket_btn {
+	color: #FFFFFF;
+	/*font-size: 15px;
+	 height: 35px; */
+	text-align: center;
+	width: 100px;
+	background-color: #222222;
+	/* margin: 50px auto; */
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.updateTicket_btn {
+	color: #FFFFFF;
+	font-size: 15px;
+	height: 35px;
+	text-align: center;
+	width: 100px;
+	background-color: #222222;
+	margin: 50px auto;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.cancelTicket_btn {
+	float: right;
+	color: #FFFFFF;
+	/*font-size: 15px;
+	 height: 35px; */
+	text-align: center;
+	width: 100px;
+	background-color: #222222;
+	/* margin: 50px auto; */
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.info_iconcancel {
+	background-image: url(../images/btn-cancel.png);
+	background-repeat: no-repeat;
+	background-color: #FF301E;
+	background-size: 50px 29px;
+	width: 59px;
+	height: 30px;
+	border: 0px;
+}
+/*CreateTicket Form*/
+/* .msCreateTicketForm {
+	padding: 10px;
+} */
+
+/*Select Product and Notification Preferences Drop down CSS*/
+.selectProduct label.ui-select,.selectNotification label.ui-select,.descriptionTextArea label.ui-input-text
+	{
+	font-weight: bold;
+	font-family: arial;
+	color: #404041;
+	text-align: left;
+	width: 100%;
+}
+
+.selectProduct .ui-btn,.selectNotification .ui-btn {
+	text-align: left;
+	color: #404041;
+}
+
+.selectNotification {
+	padding-top: 10px;
+}
+
+.selectProduct .ui-select,.selectNotification .ui-select {
+	width: 100%;
+	margin: 0px;
+}
+/*End of Select Product and Notification Preferences Drop down CSS*/
+.alternateNumber {
+	font-weight: bold;
+	font-family: arial;
+	color: #404041;
+	padding-top: 10px;
+	width: 100%;
+}
+
+.descriptionTextArea {
+	padding-top: 10px;
+	padding-right: 15px;
+}
+
+.descriptionTextArea textarea.ui-input-text {
+	width: 100%;
+}
+
+.msCreateTicketForm .ui-grid-d .ui-block-a,.msCreateTicketForm .ui-grid-d .ui-block-c,.msCreateTicketForm .ui-grid-d .ui-block-e
+	{
+	width: 45px;
+}
+
+.msCreateTicketForm .ui-grid-d .ui-block-b,.msCreateTicketForm .ui-grid-d .ui-block-d
+	{
+	text-align: center;
+	padding-left: 10px;
+	padding-top: 5px;
+	width: 55px;
+	font-weight: bold;
+	color: #555555;
+}
+
+/*End of Create Ticket Css*/
+
+/*Ticket Status CSS*/
+.info_iconadd {
+	background-image: url(../images/btn-add.png);
+	background-repeat: no-repeat;
+	width: 28px;
+	height: 29px;
+	border: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+.TicketStatusListDiv {
+	padding-top: 10px;
+}
+
+.labelClass {
+	font-family: arial;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.OpenTicketDiv .ui-icon-user-imageOpenTicket {
+	background-image: url(../images/icon-ticket-open.png);
+	background-repeat: no-repeat;
+	width: 23px;
+	height: 16px;
+	background-color: transparent;
+}
+
+.dateSpan {
+	float: right;
+	font-weight: normal;
+	font-family: arial;
+	font-size: 12px;
+	padding-right: 10px;
+}
+
+.dateSpan1 {
+	font-weight: normal;
+	font-family: arial;
+	font-size: 12px;
+	padding-right: 10px;
+	position: absolute;
+	right: 30px;
+	top: 21px;
+}
+
+.OpenTicketDiv .ui-li-thumb {
+	position: absolute;
+	top: 10px;
+}
+
+.OpenTicketDiv .ui-li-heading {
+	position: absolute;
+	left: 40px;
+	top: 1px;
+}
+
+.OpenTicketDiv .ui-li-desc {
+	position: absolute;
+	left: 40px;
+	top: 40px;
+	white-space: pre-wrap;
+	padding-right: 30px;
+}
+/* .OpenTicketDiv .ui-listview, .ClosedTicketDiv .ui-listview{
+	margin:5px;
+}
+ */
+
+/*End of Ticket Status CSS*/
+
+/*Ticket Info CSS*/
+.TicketInfoPage .content-primary {
+	background-color: #FFFFFF;
+}
+
+.TicketDescription {
+	background-color: #EEEEEE;
+}
+
+.TicketInfodateSpan {
+	height: 10px;
+	width: 100%;
+	padding-bottom: 10px;
+	margin-left: 10px;
+}
+
+.TicketInfodateSpan .dateSpan {
+	float: right;
+	padding-right: 15px;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.DescriptionDiv {
+	padding-top: 10px;
+	margin: 10px;
+	border: 1px medium;
+	/* -moz-box-shadow: inset 0px 2px 6px  {global-box-shadow-inset-size}      rgba(0,0,0,.2) {global-box-shadow-color};
+    -webkit-box-shadow: inset 0px 2px 6px {global-box-shadow-inset-size}        rgba(0,0,0,.2) {global-box-shadow-color};
+    box-shadow: inset 0px 2px 7px  {global-box-shadow-inset-size}               rgba(0,0,0,.2) {global-box-shadow-color}; */
+}
+
+.descriptionLabel {
+	text-align: left;
+	font-family: Arial;
+	font-weight: bold;
+	padding-left: 15px;
+	color: #404041;
+}
+
+.problemDescriptionText {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	text-align: left;
+	font-family: Arial;
+	color: #404041;
+}
+
+.infoToCustText {
+	padding: 15px;
+	text-align: left;
+	font-family: Arial;
+	color: #404041;
+}
+
+.UpdateDescription {
+	background-color: #FFFFFF;
+}
+
+.UpdateDescription textarea.ui-input-text {
+	margin: 10px;
+	width: 90%;
+}
+/*End of Ticket Info CSS*/
+
+/*Search page CSS*/
+.SearchDiv .ui-input-search input.ui-input-text {
+	color: #666666;
+}
+
+.SearchDiv {
+	margin-top: 15px;
+	margin-bottom: 5px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.SearchResultText {
+	padding-top: 5px;
+	text-align: center;
+}
+
+/*End of Search page CSS*/
+body.ui-overlay-c {
+	background-color: #EEEEEE;
+}
+
+.msHomeUpperTable .ui-icon-user-imagearrow,.msHomeLowerList .ui-icon-user-imagearrow,.OpenTicketDiv .ui-icon-user-imagearrow,.ClosedTicketDiv .ui-icon-user-imagearrow,.SearchResultDiv .ui-icon-user-imagearrow
+	{
+	background-image: url(../images/icon-arrow.png);
+	background-repeat: no-repeat;
+	width: 25px;
+	height: 20px;
+	background-color: transparent;
+}
+
+.msHomeUpperTable .ui-icon-user-imageWhatsNew {
+	background-image: url(../images/icon-Whts-new.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 17px;
+	background-color: transparent;
+}
+
+.whatNew_button,.Support_button {
+	border-radius: 5px;
+	color: #2F3E46;
+}
+
+.msHomeLowerTable .ui-icon-user-imageSupport {
+	background-image: url(../images/icon-support.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 17px;
+	background-color: transparent;
+}
+
+.ui-header .ui-title,.msHomeTitle {
+	font-size: 22px;
+	color: #FFFFFF;
+	font-family: Georgia;
+	font-style: italic;
+	white-space: normal;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 400;
+}
+
+.ui-header .ui-shadow {
+	box-shadow: 0 0 0;
+}
+/*back and home button margin*/
+.ui-header .ui-btn {
+	margin-top: 2px;
+	/* margin-bottom: 1px;
+	margin-left: 3%;
+	margin-right: 10px; */
+}
+
+.ui-header {
+	background: #FF301E;
+	border: 1px solid #FF301E;
+}
+
+.ui-content {
+	padding: 0px;
+}
+
+.ui-page {
+	background: #EEEEEE;
+}
+
+/*Home page */
+#createTicket_button,#checkStatus_button,#quickanswer_button,#quickref_button,#Search_button
+	{
+	min-height: 0px;
+	padding-left: 0px;
+}
+
+.msHomeUpperTable .ui-btn,.msHomeLowerTable .ui-btn {
+	text-align: left;
+	margin: 0px;
+}
+
+.msHomeUpperTable .ui-btn-text,.msHomeLowerTable .ui-btn-text {
+	padding-left: 10px;
+}
+
+.user-imageCreateTicket,.user-imageCheckStatus,.user-imageQuickAnswer,.user-imageQuickRef,.user-imageSearch
+	{
+	position: relative;
+	top: 3px;
+}
+
+.msHomeMiddleList {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+.msHomeLowerList {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.msQRCardsContentUpperDiv {
+	background-color: #EBEBEB;
+}
+
+.msHomeUpperTable {
+	background-color: #D0D0D0;
+	width: 100%;
+}
+
+.msHomeLowerTable {
+	background-color: #EEEEEE;
+}
+
+.msQRCardsContentLowerDiv {
+	background-color: #FFFFFF;
+}
+
+#msHomeHeader .ui-grid-a {
+	padding-top: 10px;
+	text-align: center;
+	height: 46px;
+}
+
+#msHomeHeader .ui-block-a {
+	width: 90%;
+}
+
+#msHomeHeader .ui-block-b {
+	width: 10%;
+}
+
+/*padding for both buttons whats new and support*/
+#msHomeUpperTable .ui-grid-ab {
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+.msHomeLowerTable .ui-grid-ab {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+/*right icon images added for button on home page*/
+.right-icon,.secright-icon {
+	position: relative;
+	bottom: 30px;
+	right: 12px;
+	float: right;
+}
+
+.Listli {
+	background-color: white;
+}
+
+/*for all the button font size*/
+.info_iconlogo {
+	background-image: url(../images/logo-pwc-about.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	width: 58px;
+	height: 45px;
+	border: 0px;
+	display: block;
+}
+
+.info_iconback {
+	background-image: url(../images/btn-back.png);
+	background-repeat: no-repeat;
+	background-color: #FF301E;
+	background-size: 50px 29px;
+	width: 50px;
+	height: 29px;
+	border: 0px;
+}
+
+.iconback {
+	background-image: url(../images/btn-back_ipad.jpg);
+	background-repeat: no-repeat;
+	background-size: 53px 30px;
+	background-position: 0px 10px;
+	width: 53px;
+	height: 40px;
+	border: 0px;
+}
+
+.info_iconinform {
+	background-image: url(../images/icon-info.png);
+	background-repeat: no-repeat;
+	background-color: #FF301E;
+	background-size: 29px 29px;
+	width: 29px;
+	height: 29px;
+	border: 0px;
+}
+
+.info_iconblank {
+	background: none;
+	border: 0px;
+}
+
+/*about page css*/
+/*
+#aboutHdr .ui-header h1 {
+	font-size:12pt;
+	font-family:arial;
+	font-weight:bold;
+	color:#ffffff;
+	padding-top:10px;
+	display: inline; /*To allow using image as home icon
+}
+#aboutHdr .ui-header #homeicon {
+	top: 15px;
+	left: 5px;
+	position: relative;
+}
+*/
+.appName {
+	color: #FF301E;
+	font-family: Georgia;
+	/*AppName font size & family chang as per existing app*/
+	font-size: 22px;
+	font-style: italic;
+	white-space: normal;
+}
+
+#topBlock {
+	background: rgb(255, 255, 255);
+	padding: 1em;
+	text-align: right;
+}
+
+#topBlock .ui-block-a {
+	width: 40%;
+}
+
+#topBlock .ui-block-b {
+	width: 60%;
+}
+
+#aboutHdr .ui-grid-a .ui-block-a {
+	width: 40%;
+	text-align: center;
+}
+
+#aboutHdr .ui-grid-a .ui-block-b {
+	width: 60%;
+	text-align: left;
+}
+
+#appVers {
+	font-family: sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	display: block;
+} /*Appversion font size chang as per existing app*/
+#textBlock,#btmBlock {
+	padding: 0 22px 0 22px;
+}
+
+#textBlock p,#btmBlock p {
+	font-family: sans-serif;
+	color: rgb(64, 64, 65);
+}
+
+#textBlock p {
+	font-size: 12px;
+} /*cahnge pt tp px */
+#btmBlock p {
+	font-size: 12px;
+} /*cahnge pt tp px */
+#btmBlock a {
+	color: rgb(0, 0, 0);
+	/* text-decoration: none; */
+	/* Uncomment this to remove the underline from hyperlinks */
+}
+/*used for remove about page link underline(Feedback/help desk number)   */
+a.underLine:link {
+	text-decoration: none;
+}
+
+.ui-btn:focus,.ui-focus {
+	outline: none !important;
+	/* Disable the border BB puts around input/anchor elements when tapped*/
+}
+
+.ui-btn-corner-all {
+	border-radius: 10px; /* Make border-radius like old app*/
+}
+
+/* Quick Refrence Cards Page*/
+#msQRCardsHeader .ui-title {
+	padding-left: 6%;
+	padding-right: 1%;
+}
+
+.info_iconsearch {
+	background-image: url(../images/btn-search.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	width: 28px;
+	height: 30px;
+	border: 0px;
+	display: block;
+}
+
+.QRCardsListDiv h5.ui-li-heading {
+	margin: 0px;
+}
+
+.QRCardsListDiv h6.ui-li-heading {
+	padding-left: 15px;
+	padding-bottom: 10px;
+	margin: 0px;
+}
+
+.QRCardsListDiv h6.ui-link-inherit {
+	padding-left: 0px;
+}
+/* msQRCardsContent page start as css*/
+.info_iconemail {
+	background-image: url(../images/btn-email.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	width: 28px;
+	height: 30px;
+	border: 0px;
+	display: block;
+}
+
+.iconemail_ipad {
+	background-image: url(../images/btn-email_ipad.jpg);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: 0px 10px;
+	width: 75px;
+	height: 40px;
+	border: 0px;
+	display: block;
+}
+
+.msQRCardsContentUpperDiv {
+	font-size: 14px;
+	color: #404041;
+	font-family: Arial;
+	font-style: Regular;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: bold;
+	/* border-bottom:1pt solid gray; */
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-top: 1pt solid gray;
+	border-left: 1pt solid gray;
+	border-right: 1pt solid gray;
+}
+
+.msQRCardsContentLowerDiv {
+	background-color: #FFFFFF;
+	font-size: 14px;
+	color: #404041;
+	font-family: Arial;
+	font-style: Regular;
+	white-space: normal;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1pt solid gray;
+}
+/*Header of the page as text is too long*/
+#msQRCardsContent .ui-title {
+	font-size: 22px;
+	color: #FFFFFF;
+	font-family: Georgia;
+	font-style: italic;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 400;
+	padding-left: 22%;
+	padding-right: 14%;
+	white-space: nowrap;
+}
+
+/*Technology  Support Page*/
+.msTSupportListUL.ui-listview {
+	margin-top: 0px;
+	margin-left:-15px;
+	margin-right:-10px;
+	margin-bottom:10px;
+}
+/*for setting the text inside list element*/
+<<<<<<< .mine
+.msTSupportListUL .ui-li-has-icon {
+	padding-left:50px;
+	
+=======
+.msTSupportListUL .ui-link-inherit {
+	padding-left: 10px;
+	padding-right: 10px;
+	float: left;
+>>>>>>> .r8876
+}
+/*each Li element margin so text doesn't cut
+.msTSupportListUL .ui-li {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.msTSupportListDiv {
+	margin-bottom: 20px;
+}*/
+.msTSupportListUL .ui-li,.msGFSSupportListUL .ui-li{
+	border-width:thin;/* 1px 1px 1px;*/
+}
+/*GFS  Support Page*/
+.msGFSSupportListUL.ui-listview {
+	margin-top: 0px;
+}
+
+/*for setting the text inside list element*/
+<<<<<<< .mine
+.msGFSSupportListUL .ui-li-has-icon {
+	padding-left:50px;
+	
+=======
+.msGFSSupportListUL .ui-link-inherit {
+	padding-left: 10px;
+	padding-right: 10px;
+	float: left;
+>>>>>>> .r8876
+}
+/*each Li element margin so text doesn't cut
+.msGFSSupportListUL .ui-li {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.msGFSSupportListDiv {
+	margin-bottom: 20px;
+}*/
+/*Sup  Support Page*/
+.upperDiv {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.upperDivPara {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.msSupSupportContent .ui-grid-b,.midDivPara {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.lowerDiv {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.titleLabel {
+	font-size: 18px;
+	color: #404041;
+	font-family: Arial;
+	font-style: normal;
+	white-space: normal;
+	font-weight: 400;
+}
+
+.Blocktitle {
+	font-size: 14px;
+	color: #404041;
+	font-family: Arial;
+	font-style: normal;
+	white-space: normal;
+	font-weight: bold;
+}
+
+.midDivPara .hotline {
+	font-size: 14px;
+	color: #404041;
+	font-family: Arial;
+	font-style: normal;
+	white-space: normal;
+	font-weight: bold;
+}
+
+.underLine.ui-link {
+	color: #404041;
+}
+<<<<<<< .mine
+#lowerDiv .msSupSupportListUL .ui-link-inherit{
+ 	padding-left:30px;
+	
+ }
+ #lowerDiv .msSupSupportListUL .ui-icon{
+ display:none;
+ }
+ /*  msWNewCategory Page*/
+ /*for setting the margin of both category and item list of Whats New*/
+.msWNewListUL.ui-listview,.msWNewCategoryListUL.ui-listview{
+ margin:0px;
+ }
+ 
+  
+=======
+
+#lowerDiv .msSupSupportListUL .ui-link-inherit {
+	padding-left: 30px;
+}
+
+#lowerDiv .msSupSupportListUL .ui-icon {
+	display: none;
+}
+/*  msWNewCategory Page*/
+/*for setting the margin of both category and item list of Whats New*/
+.msWNewListUL.ui-listview,.msWNewCategoryListUL.ui-listview {
+	margin: 0px;
+}
+/* 
+ * iPad Styles
+ */
+>>>>>>> .r8876
+.content-secondary {
+	display: none;
+}
+
+.navbarHead {
+	display: none;
+}
+/* .content-secondary .ui-listview {
+	margin-top: 0;
+	padding-left: 15px;
+} */
+
+/*Create ticket page changes according to ipad*/
+.msCreateTicketForm .ui-grid-a .ui-block-a {
+	display: none;
+}
+
+.msCreateTicketForm .ui-grid-a .ui-block-b {
+	float: right;
+}
+<<<<<<< .mine
+.QRCardsListDiv .ui-listview-inset{
+	margin:0em 0;
+	}
+.QRCardsListDiv .ui-li:first-child,.msWNewListDiv .ui-li:first-child,
+.msWNewCategoryListDiv .ui-li:first-child,.msSupSupportContent .lowerDiv .ui-li:first-child,
+.SearchResultDiv .ui-li:first-child,.ClosedTicketDiv .ui-li:first-child,.OpenTicketDiv .ui-li:first-child,
+.msGFSSupportListDiv .ui-li:first-child,.msTSupportListDiv .ui-li:first-child
+{
+	border-top-left-radius:0em;
+	border-top-right-radius:0em;
+	}
+.QRCardsListDiv .ui-li:last-child,.msWNewListDiv .ui-li:last-child,
+.msWNewCategoryListDiv .ui-li:last-child,.msSupSupportContent .lowerDiv .ui-li:last-child,
+.SearchResultDiv .ui-li:last-child,.ClosedTicketDiv .ui-li:last-child,.OpenTicketDiv .ui-li:last-child,
+.msGFSSupportListDiv .ui-li:last-child,.msTSupportListDiv .ui-li:last-child
+{
+	border-bottom-left-radius:0em;
+	border-bottom-right-radius:0em;
+	}
+.msQRCardsContentLowerDiv p{
+	padding-left:15px;
+	padding-right:15px;
+	text-align:justify;
+=======
+
+.QRCardsListDiv .ui-listview-inset {
+	margin: 0em 0;
+>>>>>>> .r8876
+}
+
+.QRCardsListDiv .ui-li:first-child,.msWNewListDiv .ui-li:first-child,.msWNewCategoryListDiv .ui-li:first-child,.msSupSupportContent .lowerDiv .ui-li:first-child,.SearchResultDiv .ui-li:first-child,.ClosedTicketDiv .ui-li:first-child,.OpenTicketDiv .ui-li:first-child
+	{
+	border-top-left-radius: 0em;
+	border-top-right-radius: 0em;
+}
+
+.QRCardsListDiv .ui-li:last-child,.msWNewListDiv .ui-li:last-child,.msWNewCategoryListDiv .ui-li:last-child,.msSupSupportContent .lowerDiv .ui-li:last-child,.SearchResultDiv .ui-li:last-child,.ClosedTicketDiv .ui-li:last-child,.OpenTicketDiv .ui-li:last-child
+	{
+	border-bottom-left-radius: 0em;
+	border-bottom-right-radius: 0em;
+}
+
+.msQRCardsContentLowerDiv p {
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: justify;
+}
+/*Create ticket page changes according to ipad END*/
+<<<<<<< .mine
+/*Replacing the header content accorging to iPhone*/
+#msSupportHeader h1:after{
+  content: "Support";
+}
+#msCreateTicketHeader h1:after{
+  content: "Create Ticket";
+}
+#msTicketStatusHeader h1:after {
+  content: "Ticket Status";
+}
+#msTicketInfoHeader h1:after {
+  content: "Ticket ####";
+}
+#msSearchResultHeader h1:after {
+  content: "Search Result";
+}
+#msQRCardsHeader h1:after {
+  content: "Quick Reference Cards";
+}
+#msQRCardsContentHeader h1:after {
+  content: "Title Lorem ipsum dolor amet cite vas commodo consequat..";
+}
+#msSupSupportHeader h1:after{
+	content: "Support";
+}
+#msTSupportHeader h1:after{
+	content: "Technology Support";
+}
+#msGFSSupportHeader h1:after{
+	content: "GFS Support";
+}
+#msWNewHeader h1:after{
+	content: "What's New";
+}
+#msWNewCategoryHeader h1:after{
+	content: "Category";
+}
+#aboutPFPage h1:after{
+	content: "About";
+}
+ /* 
+ * iPad Styles
+ */
+@media all and (min-width: 750px){
+#msSupportHeader h1:after,#msCreateTicketHeader h1:after,#msTicketStatusHeader h1:after,
+#msTicketInfoHeader h1:after,#msSearchResultHeader h1:after,#msQRCardsHeader h1:after,
+#msQRCardsContentHeader h1:after,#msSupSupportHeader h1:after,#msTSupportHeader h1:after,
+#msGFSSupportHeader h1:after,#msWNewHeader h1:after,#msWNewCategoryHeader h1:after,
+#aboutPFPage h1:after{
+  content: "Support";
+}	
+.QRCardsListDiv .ui-li:first-child,.msWNewListDiv .ui-li:first-child,
+.msWNewCategoryListDiv .ui-li:first-child,.msSupSupportContent .lowerDiv .ui-li:first-child,
+.SearchResultDiv .ui-li:first-child,.ClosedTicketDiv .ui-li:first-child,.OpenTicketDiv .ui-li:first-child,
+.msGFSSupportListDiv .ui-li:first-child,.msTSupportListDiv .ui-li:first-child
+{
+	border-top-left-radius:0.6em;
+	border-top-right-radius:0.6em;
+=======
+@media all and (min-width: 750px) {
+	.QRCardsListDiv .ui-li:first-child,.msWNewListDiv .ui-li:first-child,.msWNewCategoryListDiv .ui-li:first-child,.msSupSupportContent .lowerDiv .ui-li:first-child,.SearchResultDiv .ui-li:first-child,.ClosedTicketDiv .ui-li:first-child,.OpenTicketDiv .ui-li:first-child
+		{
+		border-top-left-radius: 0.6em;
+		border-top-right-radius: 0.6em;
+>>>>>>> .r8876
+	}
+<<<<<<< .mine
+.QRCardsListDiv .ui-li:last-child,.msWNewListDiv .ui-li:last-child,
+.msWNewCategoryListDiv .ui-li:last-child,.msSupSupportContent .lowerDiv .ui-li:last-child,
+.SearchResultDiv .ui-li:last-child,.ClosedTicketDiv .ui-li:last-child,.OpenTicketDiv .ui-li:last-child,
+.msGFSSupportListDiv .ui-li:last-child,.msTSupportListDiv .ui-li:last-child
+{
+	border-bottom-left-radius:0.6em;
+	border-bottom-right-radius:0.6em;
+=======
+	.QRCardsListDiv .ui-li:last-child,.msWNewListDiv .ui-li:last-child,.msWNewCategoryListDiv .ui-li:last-child,.msSupSupportContent .lowerDiv .ui-li:last-child,.SearchResultDiv .ui-li:last-child,.ClosedTicketDiv .ui-li:last-child,.OpenTicketDiv .ui-li:last-child
+		{
+		border-bottom-left-radius: 0.6em;
+		border-bottom-right-radius: 0.6em;
+>>>>>>> .r8876
+	}
+	.QRCardsListDiv .ui-listview-inset {
+		margin: 1em 0;
+	}
+	.navbarHead {
+		display: block;
+		margin-right: 10px;
+	}
+	.navbarHead h4 {
+		text-align: center;
+		font-size: 18px;
+		color: #404041;
+		font-family: Arial;
+		font-style: normal;
+		white-space: normal;
+		font-weight: bold;
+	}
+	/*QRCcards page for ipad*/
+	.QRCardsListDiv {
+		padding-top: 0px;
+	}
+	/*msQRCardsContent content page */
+	#msQRCardsContent .content-primary .ui-grid-b .iconemail_ipad {
+		float: right;
+	}
+	#msQRCardsContent .content-primary .ui-grid-b .ui-block-a,#msQRCardsContent .content-primary .ui-grid-b .ui-block-c
+		{
+		width: 20%;
+	}
+	#msQRCardsContent .content-primary .ui-grid-b .ui-block-b {
+		width: 60%;
+	}
+	.msCreateTicketForm .ui-grid-a .ui-block-a {
+		display: block;
+	}
+	.Content,.msCreateTicketForm {
+		background-image: url(../images/vertical-line1.gif);
+		background-repeat: repeat-y;
+		background-position: 35.06% center;
+		display: block;
+	}
+	.content-secondary {
+		display: block;
+		float: left;
+		width: 35%;
+		position: fixed;
+	}
+	.content-primary {
+		float: right;
+		width: 62%;
+		padding-right: 1%;
+		overflow-y: visible;
+	}
+	.ui-header a.info_iconback,.ui-header a.info_iconHome,.ui-header a.info_iconcancel,.ui-header a.info_iconemail,.ui-header a.info_iconadd
+		/* .ui-header a.info_iconinform */ {
+		display: none;
+	}
+	.ui-content {
+		min-height: 585px;
+	}
+
+	/*Create ticket page for ipad*/
+	.msHomeUpperTable {
+		background-color: #ebebeb;
+		width: 100%;
+	}
+	.msHomeLowerTable {
+		background-color: #EBEBEB;
+	}
+	body.ui-overlay-c {
+		background-color: #FFFFFF;
+	}
+	.ui-page {
+		background: #FFFFFF;
+	}
+	.msMainDiv {
+		background: #ebebeb;
+		border: 1px solid;
+		border-color: #b6b7b7;
+	}
+
+	/*Ticket status Css*/
+	.TicketStatusListDiv { /* padding-right: 30px; */
+		
+	}
+	.closedLabel {
+		padding-top: 20px;
+	}
+	#msTicketStatus .content-primary .ui-grid-b .iconCreate {
+		float: right;
+	}
+	/*End of Ticket Status*/
+	/*Ticket Info Page*/
+	#msTicketInfo .content-primary .ui-grid-b .iconback {
+		float: left;
+	}
+	.TicketDescription {
+		padding-top: 10px;
+	}
+	.TicketDescription .dateSpan {
+		float: right;
+	}
+	.updateTicket_btn {
+		margin-top: 30px;
+		margin-left: 44%;
+	}
+	.UpdateDescription textarea.ui-input-text {
+		margin: 10px;
+		width: 96%;
+	}
+	/*End of Ticket Info Page*/
+}
+
+.iconCreate {
+	background-image: url("../images/btn-create-ticket.jpg");
+	background-position: 0 10px;
+	background-repeat: no-repeat;
+	background-size: 115px 30px;
+	border: 0 none;
+	height: 40px;
+	width: 115px;
+}
+
+
+

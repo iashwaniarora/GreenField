@@ -1,0 +1,310 @@
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+.contact_img{	
+width:480px;
+height:200px;
+	}
+
+}
+
+
+/*Genric Css aplies to all pages*/
+.ui-header {
+ 	background: #00BD26;
+	border: 1px solid #00BD26; 
+	height:43px;
+}
+ .ui-header .ui-btn-right{
+	top:0px;
+	right:0px;
+}
+
+.info_icon{
+	background-image: url(../images/drawable-mdpi/info_icon_unpressed.png);
+	background-repeat: no-repeat;
+	background-size: 45px 44px;
+	width: 45px;
+	height: 44px;
+	border: 0px;
+}
+
+.info_iconblank {
+	background: #00BD26;
+	border: 0px;
+}
+
+.contentHeading{
+	color: #00BD26;
+	font-family: Georgia;
+}
+.contentSubHeading{
+	color: #CFCFCF;
+	font-family: Georgia;
+}
+.centreText{
+	text-align:center;
+}
+.paddingHeader{
+	padding-top:12%;
+}
+.paddingHeight{
+	padding-top:30%;
+}
+.navTitle span{
+	font-size:12px;
+	background: #00BD26;
+	border: 1px solid #00BD26; 
+}
+
+.ui-footer.ui-bar-a{
+	background: #00BD26;
+}
+.ui-header .ui-btn-inner{
+	border-left:none;
+	border-top:none;
+	border-right:none;
+	border-bottom:none;
+	
+}
+.ui-header .ui-title {
+	font-size: 22px;
+	color: #FFFFFF;
+	font-family: Georgia;
+	/* font-style: italic; */
+	white-space: normal;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 400;
+}
+.myimage {float:right;}
+.mydev{
+	border: 1px dashed #808080;
+	width:100%;
+}
+
+.gfSearchPageContent{
+	padding-top:0px;
+	padding-left:0px;
+	padding-right:0px;
+}
+#gfSearch .navTitle.Search .ui-btn-text,#gfSearch  .navTitle.Recent .ui-btn-text{
+	color: #FFFFFF;
+	font-family: Georgia;
+	font-size: 16px;
+	font-weight: 400;
+}
+.SearchResultDiv,.recentNotice{
+	margin:20px;
+	
+}
+
+.idlabel,.idlabel_h{
+	font-size: 12px;
+	
+}
+/*--------*******************Added by Ashwani*******************/
+.separator {
+	border-bottom: 1px dotted #333;
+}
+
+#prideGroupLoogo {
+	float: right;
+}
+
+#aboutAddressText {
+	width: 80%;
+}
+
+
+#gf_Map{
+	background-image: url(../images/drawable-mdpi/gf_Map.png);
+	background-repeat: no-repeat;
+	background-color: #242424;
+	background-size: 272px 130px;
+	width: 272px;
+	height: 130px;
+	border: 0px;
+	}
+
+#dottedLine {
+	border-top: 3px dotted #000000;
+	margin-top: 10px;
+	margin-bottom: 10psx
+}
+
+.recentNotice {
+	display: none
+}
+
+#contactUsDeveloperDetails
+{
+	text-align:justify;
+text-justify:auto;
+}
+/*--------*******************Added by Ashwani*******************/
+
+
+.zAboutContent {padding:0px;}
+.zAboutContentBox{margin:10px;}
+
+.iconcoupon{
+	background-image: url(../images/FREE ALIGNMENT CHECK.gif);
+	background-repeat: no-repeat;
+	background-color: #242424;
+	background-size: 272px 130px;
+	width: 272px;
+	height: 130px;
+	border: 0px;
+	}
+.info_iconback {
+	background-image: url(../images/main.png);
+	background-repeat: no-repeat;
+	background-color: #242424;
+	background-size: 48px 31px;
+	width: 48px;
+	height: 31px;
+	border: 0px;
+}
+.info_iconlogo {
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	width: 310px;
+	height: 89px;
+	border: none;
+	display: block;
+}
+/*Home Page Appointment CSS*/
+.zAppointmentContent .logo{width:50px;
+height:46px;}
+.label_H{
+	text-align:justify;
+}
+.navbarHead .ui-grid-b{
+	padding-top:20px;
+}
+.navbarHead .ui-block-a{padding-right:10px;}
+.heading{
+	margin:10px;
+	text-align:center;
+}
+#zAppointment .navbarHead img{
+	float:right;
+}
+#zAppointment .navbarHead .ui-block-a,#zAppointment .navbarHead .ui-block-c{
+	width:20%;
+}
+#zAppointment .navbarHead .ui-block-b{
+	width:60%;
+	text-align:center;
+}
+.zAppointmentContent .ui-block-a{
+	width:25%;
+}
+.zAppointmentContent .ui-block-b{
+	width:75%;
+}
+.zAppointmentContent input.ui-input-text{
+	width:92%;
+	outline:lightskyblue none;
+}
+
+.submit_btn {
+text-align:center;
+width:100px;
+margin-left:37%;
+}
+/*About Us page*/
+.zAboutContent .listContainer .ui-icon{
+display:none;
+}
+.zAboutContent .listContainer .ui-btn-text{
+padding-left:10px;}
+.zAboutContent .ui-grid-a .ui-block-a{
+	width:30%;
+	
+}
+.zAboutContent .ui-grid-a .ui-block-b{
+	width:70%;
+}
+
+.zAboutContent .ui-grid-a .logo{float:right;
+}
+.zAboutContent .heading{
+font-family: serif;
+font-size: 18pt;
+font-style: italic;
+}
+.zAboutContent .subheading{
+font-family: serif;
+font-size: 8pt;
+font-style: italic;
+display:block;
+}
+
+.zAboutContentBox{
+border-style: groove;
+border-width: medium;
+}
+.rows{
+	display: table;
+	padding-left:15px;
+	padding-top:15px;
+	padding-right:10px;
+	padding-bottom:5px;
+	text-align:justify;
+	}
+.textjustify{
+text-align:justify;
+padding-left:10px;
+padding-right:10px;
+}
+/*Coupons Page CSS*/
+.zCouponsContent .ui-icon{
+	display:none;
+	
+	}
+
+.zCouponsContent p{
+	text-align:center;
+	font-family: Arial;
+	font-size: 13px;
+	}
+.zCouponsContent .ui-li-divider{
+	background: red;
+	color:white;
+	text-align:center;
+	border:1px solid black;
+	}
+	/*  zLocation page css*/
+#zLocation .ui-content,#zContact .ui-content{
+padding:0px;
+}
+/*Contact us page*/
+.time_div,.hrsHeading{text-align:center;
+}
+#zContact .ui-block-a a{float:right;}
+#zContact .hrsHeading{
+	font-size14px;
+	margin-top:3px;
+	margin-bottom:3px;}
+	
+.zAppointmentContent .navbarHead ui-block-a,.zAppointmentContent .navbarHead ui-block-c{
+width:30%;}
+.zAppointmentContent .navbarHead ui-block-b{
+width:40%;	}
+#zContact h5{
+	text-decoration: none;
+	}
+
+/* disable shadows for better android performance */
+.ui-body-a,.ui-bar-a,.ui-btn-up-a,.ui-btn-hover-a,.ui-btn-down-a,.ui-body-b,.ui-bar-b,.ui-btn-up-b,.ui-btn-hover-b,.ui-btn-down-b,.ui-body-c,.ui-bar-c,.ui-btn-up-c,.ui-btn-hover-c,.ui-btn-down-c,.ui-body-d,.ui-bar-d,.ui-btn-up-d,.ui-btn-hover-d,.ui-btn-down-d,.ui-body-e,.ui-bar-e,.ui-btn-up-e,.ui-btn-hover-e,.ui-btn-down-e,.ui-shadow-inset,.ui-icon-shadow,.ui-focus,.ui-overlay-shadow,.ui-shadow,.ui-btn-active
+	{
+	text-shadow: none !important;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}

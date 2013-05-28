@@ -1,0 +1,198 @@
+/* search input validation  */
+var SearchGlobalVar = {};
+SearchGlobalVar.isBack= false;
+
+function search(event){
+	
+	var inputVal = document.getElementById("pfsearchfeild").value;
+	inputVal = removeWhiteSpace(inputVal);
+	console.log("input Value :-" + inputVal );
+	SearchGlobalVar.isBack= false;
+	if(isEmpty(inputVal)){
+		alert(msgTexts.searchEmptyText);
+	}else if(isSpecialChar(inputVal)){
+		console.log("Please provide alphabets only");
+		alert(msgTexts.searchSpecialAndNumberCharText);
+		//$('#errormsg').text("Please provide alphabets only");
+	}else if(hasWhiteSpace(inputVal)  || inputVal.length <3 ){
+		console.log("Please provide at least three alphabets to search");
+		alert(msgTexts.searchEmptyWhiteSpaceText);
+		//$('#errormsg').text("Please provide at least three alphabets to search");
+	}else {
+		$.mobile.changePage("#pfSearchPage", {});
+	}
+	event.preventDefault(); // cancel default behavior
+
+}
+
+function removeWhiteSpace(s){
+	s = s.replace(/^\s+|\s+$/g, ''); 
+	return s;
+}
+function isEmpty(val){     
+	return (val === undefined || val == null || val.length <= 0) ? true : false; 
+	} 
+
+function hasWhiteSpace(s) {  
+	return /^\s+$/g.test(s); 
+	} 
+function isSpecialChar(s){
+	 var iChars = "!@#$%^&*()+=[]\\;,/{}|\":<>?1234567890";
+	   for (var i = 0; i < s.length; i++) {
+	  	if (iChars.indexOf(s.charAt(i)) != -1) {
+	  //	  console.log("Your string has special characters.");
+	  	return true;
+	  	}
+	  }
+}
+/* Ajax call for search user */
+function pfSearch(){
+	
+	var fName = null;
+	var lName = null;
+	
+	var inputVal = document.getElementById("pfsearchfeild").value;
+	SearchGlobalVar.isBack= true;
+	console.log("input Value :-" + inputVal );
+	 	var delimiter = " ";
+		var temp =  new Array(); 
+		temp =	inputVal.split(delimiter); 
+
+		
+		var count = 0;
+		for (var i = 0; i < temp.length; i++) {
+			if (temp[i] != null && count == 0 && !isEmpty(temp[i]) ) {
+				fName = temp[i].toString();
+				console.log("fName:-" + fName);
+				count = 1;
+			} else if (temp[i] != null && count == 1
+					&& !isEmpty(temp[i])) {
+				lName = temp[i].toString();
+				console.log("lName:-" + lName);
+			}
+		}
+		temp = null;	
+
+	var inputData = {"firstName":fName,"lastName":lName};
+	
+	var servicePath ="pf/services/searchUser.do";
+	console.log("servicePath: " + servicePath);
+	var inputJSONString = $.toJSON(inputData);
+	console.log("inputJSONString: " + inputJSONString);
+	
+	AjaxErrorMsg.searchAjax = $.ajax({
+				url : servicePath,
+				type : "POST",
+				contentType : "application/json",
+				data : inputJSONString,
+			    dataType : "json",
+				success : function(
+						result) {
+				/*	var response = $.toJSON( result );
+					console.log("response :- " + response.SearchUserList);*/
+					if (result.STATUS.status == "SUCCESS") {
+						console.log("result.STATUS.status :- " + result.STATUS.status);
+						$('#resultFound').text(result.SearchUserList.length+" matching results found for your search '"+inputVal+"':");
+						populateRowsSearchPage(result);
+						
+					} else {
+						/*$('#resultFound').text(result.STATUS.errorMessage);*//*No data found msg commented*/
+						console.log("Search.STATUS.errorMessage :- " + result.STATUS.errorMessage);
+						AjaxErrorMsg.SearchError = true;
+						alert(msgTexts.searchResult);
+					}
+				}
+				/*error : function(data) {
+					console.log("Error occurred in searchUser Service.");
+				}*/
+			  
+			});
+}
+//function populateRowsSearchPage(dataResponse)
+function populateRowsSearchPage()
+{ 
+dataResponse={"STATUS":{"errorMessage":"","exceptionMessage":"","status":"SUCCESS"},"SearchUserList":[{"userName":"Sanidas, Kelly C","ppid":"1000161165","businessArea":"US - IFS/Global PwC IT","officeLocation":"United States of America/Tampa/3109 West Dr ML King, Jr Blvd","officePhone":"(813) 348-7304","grade":"Manager I IT Systems"}
+,{"userName":"Sanidas, Thomas C","ppid":"1000175980","businessArea":"US - IFS/US IT Svcs/CTO","officeLocation":"United States of America/Tampa/3109 West Dr ML King, Jr Blvd","officePhone":"(813) 348-7277","grade":"Manager II IT System Arc"}]}
+
+console.log("populateRowsSearchPage Response");
+
+            var len= dataResponse.SearchUserList.length;
+             console.log("populateRows Length"+len+":::::::::::"+dataResponse.SearchUserList[0].userName);
+             $("#loadinggif").show();     
+             var data=new Array();  
+             if(len > 10){
+	           	 for(var i=0;i<10;i++){
+	           		 data[i] = {"ppid":dataResponse.SearchUserList[i].ppid,"userName":dataResponse.SearchUserList[i].userName,"businessArea":dataResponse.SearchUserList[i].businessArea,"officeLocation":dataResponse.SearchUserList[i].officeLocation,
+	           		"officePhone":dataResponse.SearchUserList[i].officePhone,"grade":dataResponse.SearchUserList[i].grade};
+	               }
+	              SearchlistUpdateWBS(data);
+           		         
+           		setTimeout(function(){  
+           		  	var data1=new Array();
+           		    for(var j=0, i=10; i<len; j++, i++){
+           		            data1[j] = {"ppid":dataResponse.SearchUserList[i].ppid,"userName":dataResponse.SearchUserList[i].userName,"businessArea":dataResponse.SearchUserList[i].businessArea,"officeLocation":dataResponse.SearchUserList[i].officeLocation,
+           		           	"officePhone":dataResponse.SearchUserList[i].officePhone,"grade":dataResponse.SearchUserList[i].grade};
+           		      }
+           		    SearchlistUpdateWBS(data1);
+           		    $("#loadinggif").hide();
+           		  }, 1);    
+               }else {
+                   for(var i=0;i<len;i++){
+           		        data[i] = {"ppid":dataResponse.SearchUserList[i].ppid,"userName":dataResponse.SearchUserList[i].userName,"businessArea":dataResponse.SearchUserList[i].businessArea,"officeLocation":dataResponse.SearchUserList[i].officeLocation,
+           		        	"officePhone":dataResponse.SearchUserList[i].officePhone,"grade":dataResponse.SearchUserList[i].grade};
+           		        }
+           		      SearchlistUpdateWBS(data);
+           		   $("#loadinggif").hide();
+                }
+} 
+
+function stopProp(e){
+	//e.stopPropagation();
+	e.stopImmediatePropagation();
+}
+function getMarkUpSearch()
+{ 
+var Searchlist=null;
+
+ Searchlist="<li onclick=\"changePageReq_QRCardsContent()\" id=\"searchLi\"  value=\"${ppid}\"><a>"+
+"<h5 >Title: ${userName}</h5>"+
+
+"<h6 ><label class=\"idlabel_h\" >ID####, </label ><a class=\"idlabel\">${businessArea}</a></h6>"+
+/*"<h6 onclick=\"changePageReq_Profile(${ppid})\" ><label class=\"searchlabel_h\">Office location : </label><a  class=\"searchlabel\">${officeLocation}</a></h6>"+
+"<h4 ><label class=\"searchlabel_h\">Office Phone :  </label><a href=\"tel:${officePhone}\"  class=\"searchlabel\">${officePhone}</a></h4>"+
+*/
+/*"<h6 ><label class=\"searchlabel_h\">Office Phone :  </label><a href=\"tel:${officePhone}\" onclick=\"stopProp(event)\" class=\"searchlabel\">${officePhone}</a></h6>"+*/
+/*"<h6 ><label class=\"searchlabel_h\">Office Phone :  </label><a href=\"\"  class=\"searchlabel\">${officePhone}</a></h6>"+*/
+
+/*"<h6 onclick=\"changePageReq_Profile(${ppid})\"><label class=\"searchlabel_h\">Grade :  </label><a class=\"searchlabel\">${grade}</a></h6>"+*/
+"</a></li>";
+
+      return Searchlist;
+}
+
+function changePageReq_QRCardsContent(){
+	$.mobile.changePage("#msQRCardsContent", {});
+}
+
+//adds tax area returned markup to dom
+SearchlistUpdateWBS = function(result)
+{	
+	console.log(result+"inside Searchupdate"+getMarkUpSearch());
+	var parent = document.getElementById("Search_list");
+	$.template("Searchtemplate", getMarkUpSearch());
+	$.tmpl( "Searchtemplate",result).appendTo( parent );
+	 $('#Search_list').listview('refresh'); 
+	
+	 //parent.innerHTML = "";
+	/*if(0 == result.length)
+		$('#taxarea_add_btn').addClass('ui-disabled');
+	else
+		$('#taxarea_add_btn').removeClass('ui-disabled');*/
+	
+	
+		
+	//Mark selected value
+	/*var index = TimeSheetList.ItemListener.getSelectedItemIndex();
+	var val= TimeSheetList.DATA[index].data.workTaxArea;
+	$('[name="taxarearadio"][value^="'+ val +'"]').attr('checked', true);*/
+};
